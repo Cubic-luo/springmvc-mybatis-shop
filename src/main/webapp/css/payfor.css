@@ -1,0 +1,87 @@
+/*
+* @Author: Administrator
+* @Date:   2017-01-12 14:08:02
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-01-12 14:48:24
+*/
+.bianhao{
+  color: #333333;
+  height: 1rem;
+  line-height: 1rem;
+   font-size: 0.3rem;
+   padding: 0 0.3rem;
+   background: #fff;
+   border-bottom: 0.01rem solid #E0E0E0;
+}
+.bianhao span{
+  float: right;
+
+}
+.money{
+  color: #333333;
+  height: 1rem;
+  line-height: 1rem;
+   font-size: 0.3rem;
+   padding: 0 0.3rem;
+   background: #fff;
+}
+.money span{
+  float: right;
+  color: #FFA02F;
+
+}
+.style{
+  padding: 0 0.3rem;
+  line-height: 0.7rem;
+  height: 0.7rem;
+  font-size: 0.28rem;
+  color: #999999;
+}
+.styleList{
+  background: #fff;
+  font-size: 0.3rem;
+  color: #333;
+}
+
+.styleList p{
+  line-height: 1rem;
+  height: 1rem;
+  margin-left: 1.1rem;
+  border-bottom: 0.01rem solid #E0E0E0;
+}
+.styleList p:last-child{
+   border-bottom: none;
+}
+.styleList p img{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.styleList p input{
+  display: none;
+}
+.styleList p label{
+  float: right;
+  margin-right: 0.3rem;
+  padding-left: 0.5rem;
+  margin-top:0.3rem;
+}
+.styleList p label img{
+  width: 0.38rem;
+  height: 0.38rem;
+}
+.logo{
+  margin-left: -0.8rem;
+  margin-right: 0.2rem;
+}
+.submit{
+  background: #FFA02F;
+  border: none;
+  height: 1rem;
+  line-height: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.34rem;
+  color: #fff;
+}

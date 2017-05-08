@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.dao.UserDao">
+	<!-- 根据id查询用户，User对象包含了3个1对多的实体对象（用户收货地址，用户的订单，用户的评论），所有查询结果需要用到mybatis的1对多映射方法 -->
+	<select id="queryById" parameterType="int" resultMap="userResultMap">
+		SELECT
+		id,
+		username,
+		password,
+		role,
+		sex,
+		imgUrl
+		FROM
+		shop_user
+		WHERE
+		id = #{userId}
+	</select>
+	<!-- 根据用户名称查询用户 -->
+	<select id="queryByName" parameterType="String" resultMap="userResultMap">
+		SELECT
+		id,
+		username,
+		password,
+		role,
+		sex,
+		imgUrl
+		FROM
+		shop_user
+		WHERE
+		username = #{username}
+	</select>
+	<!-- 对应queryById方法，映射user对象的resultMap -->
+	<resultMap type="User" id="userResultMap">
+		<id property="id" column="id" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="role" column="role" />
+		<result property="sex" column="sex" />
+		<result property="imgUrl" column="imgUrl" />
+		<collection property="orders" javaType="ArrayList" column="id"
+			ofType="Order" select="shop.dao.OrderDao.queryOrderByUserId"
+			fetchType="lazy">
+			<id property="id" column="id" />
+			<result property="total" column="total" />
+			<result property="creatTime" column="creatTime" />
+			<result property="userId" column="userId" />
+		</collection>
+		<collection property="discuss" javaType="ArrayList" column="id"
+			ofType="Discuss" select="shop.dao.DiscussDao.queryByUserId"
+			fetchType="lazy">
+			<id property="id" column="id" />
+			<result property="detail" column="detail" />
+			<result property="creatTime" column="creatTime" />
+			<result property="userId" column="userId" />
+			<result property="stars" column="stars" />
+		</collection>
+	</resultMap>
+	<!-- 注册用户 -->
+	<insert id="creatUser" parameterType="User">
+		INSERT INTO
+		shop_user(username,password,role,sex,imgUrl)
+		VALUES(#{username},#{password},#{role},#{sex},#{imgUrl})
+	</insert>
+	<!-- 修改用户信息 -->
+	<update id="updateUser" parameterType="User">
+		UPDATE shop_user set
+		username=#{username} WHERE id=#{id}
+	</update>
+</mapper>

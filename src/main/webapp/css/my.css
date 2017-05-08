@@ -1,0 +1,190 @@
+/*
+* @Author: Administrator
+* @Date:   2017-01-06 16:20:50
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-01-08 16:33:06
+*/
+body {
+	padding-bottom: 1.2rem;
+}
+
+/* 登录部分开始 */
+.login {
+	height: 2.4rem;
+	background: #FFA02F;
+	font-size: 0.24rem;
+	position: relative;
+	color: #fff;
+	padding-left: 2.3rem;
+	padding-top: 0.7rem;
+	margin-bottom: 0.2rem;
+}
+.username{
+	display:block;
+	font-size:0.4rem;
+	margin-top:0.2rem;
+	
+}
+.loginBtn{
+	color:#fff;
+	font-size:0.3rem;
+}
+.touxiang {
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	left: 0.36rem;
+	top: 50%;
+	margin-top: -0.75rem;
+	border-radius: 50%;
+}
+
+.next {
+	position: absolute;
+	width: 0.26rem;
+	height: 0.35rem;
+	right: 0.3rem;
+	top: 50%;
+	margin-top: -0.18rem;
+}
+
+.login button {
+	background: none;
+	border: none;
+	font-size: 0.3rem;
+	color: #fff;
+	margin-bottom: 0.3rem;
+	padding: 0;
+}
+
+.middle {
+	background: #fff;
+}
+
+.middle p {
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.32rem;
+	padding-left: 0.4rem;
+	border-bottom: 0.01rem solid #e0e0e0;
+}
+
+.middle p a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #333;
+}
+
+.middle p img {
+	margin-right: 0.3rem;
+	width: 0.44rem;
+	height: 0.44rem;
+}
+
+/* 底部菜单 */
+.bottomMenu {
+	background: #FFFFFF;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	width: 100%;
+	font-size: 0;
+}
+
+.bottomMenu li {
+	height: 100%;
+	padding-top: 0.12rem;
+	display: inline-block;
+	width: 33.33%;
+	text-align: center;
+	font-size: 0.22rem;
+}
+
+.bottomMenu li a {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	color: #8B8B8B;
+}
+
+.bottomMenu li:nth-child(3) a {
+	color: #FFA02F;
+}
+
+.bottomMenu img {
+	width: 0.52rem;
+	height: 0.52rem;
+}
+
+/* 注销 */
+.zhuxiao {
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.3rem;
+	text-align: center;
+	color: #333;
+	width: 100%;
+	margin-top: 0.5rem;
+	background: #fff;
+	border-bottom: 0.01rem solid #e0e0e0;
+	border-top: 0.01rem solid #e0e0e0;
+}
+
+/* 弹框 */
+.modalOverlay {
+
+	/* 整个弹框 */
+	background: transparent;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 4;
+}
+
+.modalMengCeng {
+
+	/* 弹框弹出时的黑色背景 */
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;/* 控制黑色背景透明度 */
+	z-index: 5;
+	background: #000000;/* 黑色背景颜色 */
+}
+.close{
+	font-size: 0.3rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+.discussTanKuang {
+
+	/* 作为控制整个弹框的钩子 */
+	display: none; 
+	font-size: 0.3rem;
+}
+
+.modalDiscussData {
+
+	/* 控制弹框内容体的样式，即中间白色放内容的部分 */
+	position: fixed;
+	top: 50%;
+	margin-top: -1rem;/* 设置为高度的一半，使其垂直居中 */
+	z-index: 6;/* 这里要比其他的z-index大 */
+	left: 50%;
+	margin-left: -3.35rem;/* 宽度的一半，使水平居中 */
+	border-radius: 0.2rem;/* 控制圆角 */
+	width: 6.7rem;/* 内容宽度 */
+	height: 2rem;/* 内容高度 */
+	background: white;/* 内容背景色 */
+	border: 1px solid #000;/* 边框色 */
+	text-align: center;
+	opacity: 1 !important;
+}

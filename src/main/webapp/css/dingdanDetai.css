@@ -1,0 +1,177 @@
+body {
+	padding-bottom: 0.2rem;
+}
+
+.wrap {
+	background: #FFFFFF;
+	padding: 0 0.4rem;
+	height: 100%;
+}
+
+.now {
+	display: none !important;
+}
+
+.nowBox {
+	color: #0A7AE2;
+	float: right;
+	display: inline-block;
+}
+
+.state{
+	font-size: 0.3rem;
+	line-height: 0.9rem;
+	margin-bottom: 0.2rem;
+	padding: 0 0.3rem!important;
+}
+/*订单详情*/
+.foodList {
+	font-size: 0.3rem;
+	line-height: 0.8rem;
+}
+
+.foodNumber {
+	font-size: 0.3rem;
+	color: #999999;
+	text-align: center;
+}
+
+.foodPrice {
+	font-size: 0.3rem;
+	text-align: right;
+	color: #333333;
+}
+.wrap .foodList:last-child{
+	border-bottom: 0.01rem solid #e0e0e0;
+}
+/*总价*/
+.allMoney{
+	background: #fff;
+	line-height: 1rem;
+	height: 1rem;
+	color: #333;
+	border-bottom: 0.01rem solid #e0e0e0;
+}
+.jifen{
+	border-bottom: none!important;
+	line-height: 1rem;
+}
+.foodName{
+	color: #333333;
+}
+.sumPrice {
+	padding-top: 0.38rem;
+	color: #E8B252;
+	font-size: 0.3rem;
+}
+
+.someFree {
+	padding-top: 0.28rem;
+	color: #5FA776;
+	font-size: 0.3rem;
+}
+.activeColor{
+	color: #FFA02F;
+}
+/* 店铺 */
+.shopBox{
+	font-size: 0.3rem;
+	line-height: 1rem;
+	height: 1rem;
+	margin: 0 -0.4rem;
+	padding: 0 0.3rem;
+	border-bottom: 0.01rem solid #e0e0e0;
+	color: #333333;
+}
+.shopBox img{
+	width: 0.42rem;
+	height: 0.33rem;
+	margin-right: 0.2rem;
+	margin-top: -0.04rem;
+}
+
+/* 配送信息开始 */
+.peisongMessage{
+	margin-top: 0.2rem;
+	font-size: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.title{
+	line-height: 1rem;
+	height: 1rem;
+	font-size: 0.32rem;
+	color: #333;
+	border-bottom: 0.01rem solid #e0e0e0;
+	margin: 0 -0.4rem;
+	padding: 0 0.4rem;
+}
+.peisongMessage .songdaTime{
+	height: 1rem;
+	line-height: 1rem;
+}
+.peisongMessage .address{
+	padding: 0.3rem 0;
+	line-height: 1.6;
+}
+/* 订单信息 */
+.dingdan{
+	font-size: 0.3rem;
+}
+.dingdan p{
+	line-height: 1rem;
+	border-bottom: 0.01rem solid #e0e0e0;
+	color: #333333;
+}
+.dingdan p span{
+	color: #808080;
+}
+/* 评价内容开始 */
+.pinjia{
+	margin-top: 0.2rem;
+	font-size: 0.26rem;
+}
+.xingji1{
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+.xingji1 img{
+	width:0.26rem;
+	height: 0.24rem; 
+}
+.pinjiaTime{
+	color: #999!important;
+	margin-top: 0.2rem;
+}
+.shangjiaRe{
+	font-size: 0.26rem;
+	background: #e0e0e0;
+	padding: 0.2rem;
+	margin-top: 0.2rem;
+	border-radius: 0.1rem;
+	margin-bottom: 0.3rem;
+}
+/* 待支付 */
+.payfor{
+	line-height: 1rem;
+	height: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	border-top: 0.01rem solid #e0e0e0;
+	font-size: 0.3rem;
+	background: #fff;
+	text-align: right;
+}
+.payfor a{
+	color: #4d4d4d;
+	display: inline-block;
+	width: 1.2rem;
+	height: 0.6rem;
+	border-radius: 0.1rem;
+	border: 0.01rem solid #CCCCCC;
+	line-height: 0.6rem;
+	text-align: center;
+	margin-right: 0.3rem;
+}

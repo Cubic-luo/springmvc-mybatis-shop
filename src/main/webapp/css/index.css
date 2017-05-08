@@ -1,0 +1,880 @@
+.commonHeader {
+	position: static;
+}
+
+body {
+	padding-top: 0;
+	overflow-y: hidden;
+}
+
+/*logo开始*/
+.logoBox {
+	height: 3.14rem;
+	background: #FFA02F;
+	z-index: 2;
+	color: #fff;
+	padding: 0.24rem 0.3rem 0.28rem;
+}
+
+.locationBox {
+	font-size: 0.34rem;
+}
+
+.locationImg {
+	height: 0.38rem;
+	width: 0.25rem;
+	margin-top: -0.1rem;
+	margin-right: 0.22rem;
+}
+
+.logo {
+	font-size: 0;
+	margin-top: 0.4rem;
+}
+
+.logo li {
+	display: inline-block;
+	font-size: 0.26rem;
+	float: left;
+}
+
+.indexlogo {
+}
+
+.logoBox .topContent {
+	padding-left: 0.3rem;
+}
+
+.logoBox .topContent h1 {
+	font-size: 0.34rem;
+}
+
+.logoBox .topContent p {
+	max-width: 4.6rem;
+	margin-top: 0.2rem;
+}
+
+/*文字横向滚动*/
+#scroll_div {
+	max-width: 4.6rem;
+	margin-top: 0.2rem;
+	overflow: hidden;
+	white-space: nowrap;
+	width:100%;
+	color: #fff;
+}
+#scroll_div a{
+	color: #fff;
+	line-height: 30px;
+}
+#scroll_begin,#scroll_end {display: inline;}
+.meter {
+	float: right;
+	font-size: 0.28rem !important;
+}
+
+.indexlogo img {
+	width: 1.66rem;
+	height: 1.66rem;
+}
+
+/*logo结束*/
+
+/*预订座位*/
+.orderSeat {
+	text-align: center;
+	font-size: 0;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	background: #FFFFFF;
+	border: none;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.orderSeat li {
+	font-size: 0.32rem;
+	display: inline-block;
+	width: 33.33%;
+	color: #4D4D4D;
+	height: 0.9rem;
+}
+
+.waiMaiTitle {
+	display: inline-block;
+	width: 1.68rem;
+	height: 0.64rem;
+	color: #E8B252;
+	border-radius: 0.1rem 0 0 0.1rem;
+	line-height: 0.64rem !important;
+	font-size: 0.32rem;
+	border: 0.01rem #E8B252 solid;
+}
+
+.titleActive {
+	border-bottom: 0.04rem solid #EE8932;
+}
+.shoppingCartHideTop2 {
+	height: 0.6rem;
+	background: #EFEFEF;
+	line-height: 0.6rem;
+	width: 100%;
+	padding: 0 0.3rem;
+	font-size: 0.3rem;
+}
+
+.shoppingCartHideTop3 {
+	height: 0.6rem;
+	background: #EFEFEF;
+	line-height: 0.6rem;
+	width: 100%;
+	padding: 0 0.3rem;
+	font-size: 0.3rem;
+}
+
+.peicaiTitle {
+	width: 100%;
+	padding: 0 0.3rem;
+	color: #00A2E9;
+	font-size: 0.3rem;
+	line-height: 0.6rem;
+	background: #FFFFFF;
+}
+
+.chaoShiTitle {
+	font-size: 0.32rem;
+	display: inline-block;
+	width: 1.68rem;
+	height: 0.64rem;
+	border-radius: 0 0.1rem 0.1rem 0;
+	line-height: 0.64rem !important;
+	color: #E8B252;
+	border: 0.01rem #E8B252 solid;
+}
+
+/*左边菜单导航开始*/
+.left {
+	width: 23%;
+	float: left;
+	background: #EFEFEF;
+	text-align: center;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.left ul li p {
+	font-size: 0.3rem;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+.left ul li {
+	height: 1.24rem;
+	padding: 0.4rem 0;
+	margin: 0 0.08rem;
+	border-bottom: 0.01rem #ACACAD dashed;
+	line-height: 1.4;
+}
+
+/*菜单类别有2行显示时样式*/
+.li2 {
+	line-height: 1.4 !important;
+	padding: 0.2rem 0 !important;
+}
+
+/*左边菜单导航结束*/
+
+/*购物车开始*/
+.shoppingCart {
+	width: 100%;
+	z-index: 3;
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+	background: inherit;
+	/*display: none;*/
+}
+.goodsId{
+	display: inline-block;
+	
+}
+/*显示在底部的部分开始*/
+.shoppingCartShow {
+	display:none;
+	background: #fafafa;
+	line-height: 0.99rem;
+	height: 0.99rem;
+	border-top: 0.01rem solid #DFE0E0;
+	border-bottom: 0.01rem solid #E0E0E0;
+	font-size: 0.3rem;
+	padding: 0 0.3rem;
+	position: relative;
+}
+
+.cartGo {
+	font-size: 0.34rem;
+	float: right;
+	color: #fff !important;
+	background:#FFA02F;
+	width: 2.3rem;
+	height: 0.99rem;
+	margin-right: -0.3rem;
+	text-align:center;
+}
+
+.cartLogo img {
+	display: inline-block;
+	height: 0.5rem;
+	width: 0.6rem;
+}
+
+.imgbox1 {
+	display: inline-block;
+	width: 0.9rem;
+	height: 0.9rem;
+	margin-top: 0.05rem;
+	line-height: 0.9rem;
+	border-radius: 50%;
+	background: #FFA02F;
+}
+
+.cartLogo {
+	display: inline-block;
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	bottom: 0.34rem;
+	background: #fafafa;
+	text-align: center;
+}
+
+.listNumber {
+	position: absolute;
+	background: #FF5900;
+	display: inline-block;
+	width: 0.36rem;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 0.2rem;
+	color: white;
+	left: 0.7rem;
+}
+
+.left ul li {
+	position: relative;
+}
+
+.listNumber1 {
+	position: absolute;
+	background: #FF5900;
+	display: inline-block;
+	width: 0.36rem;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 0.2rem;
+	color: white;
+	top: 0.2rem;
+	right: 0;
+	display: none;
+}
+
+.sumMoney {
+	color: #FFA02F;
+}
+
+/* 底部菜单 */
+.bottomMenu {
+	background: #FFFFFF;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	width: 100%;
+	font-size: 0;
+}
+
+.bottomMenu li {
+	height: 100%;
+	padding-top: 0.12rem;
+	display: inline-block;
+	width: 33.33%;
+	text-align: center;
+	font-size: 0.22rem;
+}
+
+.bottomMenu li a {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	color: #8B8B8B;
+}
+
+.bottomMenu li:nth-child(1) a {
+	color: #FFA02F;
+}
+
+.bottomMenu img {
+	width: 0.52rem;
+	height: 0.52rem;
+}
+.sumMoneyBox{
+	display: inline-block;
+	position: absolute;
+	top: -0.2rem;
+	left: 1.5rem;
+}
+.freePeiSong{
+	color: #999;
+	font-size: 0.24rem;
+	position: absolute;
+	left: 1.5rem;
+	top: 0.2rem;
+}
+/*显示在底部的部分结束*/
+
+/*购物车结束*/
+
+/*菜展示栏开始*/
+.right {
+	width: 77%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	background: #FFFFFF;
+}
+
+.FoodBoxTop {
+	height: 100%;
+}
+
+.FoodBoxTop img {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.right ul li {
+	margin: 0 0.2rem;
+	padding: 0.24rem 0;
+	border-bottom: 0.01rem #F3F3F4 solid;
+}
+
+/*菜的大类别*/
+.right ul h3 {
+	color: #666;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	background: #F7F7F7;
+	font-size: 0.28rem;
+	padding-left: 0.34rem;
+}
+
+.FoodBoxBottom {
+	text-align: right;
+	padding-left: 0.24rem;
+}
+
+.FoodBoxBottom h4 {
+	font-size: 0.32rem !important;
+	color: #4D4D4D;
+	text-align: left;
+}
+
+.FoodBoxBottom p {
+	font-size: 0.26rem !important;
+	color: #999;
+	text-align: left;
+	margin-bottom: 0.05rem;
+	margin-top: 0.05rem;
+}
+
+.foodPrice {
+	color: #FF5900;
+	font-size: 0.34rem;
+	float: left;
+	line-height: 0.45rem;
+}
+
+.jianLogo img {
+	display: inline-block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin-right: 0.1rem;
+}
+.jiaLogo{
+	display:inline-block;	
+	margin-left:0.2rem;
+}
+.jianLogo{
+	display:none;
+	margin-right:0.2rem;
+}
+
+.jiaLogo img {
+	display: inline-block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin-left: 0.1rem;
+}
+
+
+.foodNumber1 {
+	display: none;
+	font-size: 0.3rem;
+	color: #332C2B;
+	width: 0.7rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.shopCartList span{
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+.shopCartList span:NTH-CHILD(1){
+	text-align:left;
+}
+.shopCartList span:NTH-CHILD(3){
+	text-align:right;
+	color:#FF5900;
+	
+}
+/*菜展示栏结束*/
+html,
+body {
+	height: 100%;
+}
+
+/*购物车隐藏部分*/
+.shoppingCartHide {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0.99rem;
+	font-size: 0.18rem;
+	display: none;
+	overflow-y: auto;
+	background: #F5F5F5;
+}
+
+.shoppingCartShowActive {
+	bottom: 0 !important;
+}
+
+.shoppingCartHideTop {
+	text-align: right;
+	height: 0.6rem;
+	background: #EFEFEF;
+	line-height: 0.6rem;
+	width: 100%;
+	padding: 0 0.3rem;
+	font-size: 0.3rem;
+	display: none;
+}
+
+.shoppingCartHideTop img {
+	display: inline-block;
+	width: 0.24rem;
+	height: 0.28rem;
+	margin-right: 0.3rem;
+}
+
+.shoppingCartHideTop1 {
+	float: left;
+}
+
+.shoppingCartHide div {
+	text-align: right;
+	padding: 0 0.3rem;
+	background: #FFFFFF;
+	line-height: 1.2rem;
+	font-size: 0.34rem;
+	border-bottom: 0.01rem solid #F0F0F1;
+}
+
+.shoppingCartHide div .foodPrice {
+	float: none;
+}
+
+.shoppingCartHide .foodName {
+	float: left;
+	color: #332C2B;
+}
+
+.shoppingCartHide .jianLogo {
+	display: inline-block;
+}
+.shoppingCartHide .jiaLogo {
+	display: inline-block;	
+}
+.shoppingCartHide .foodNumber1 {
+	display: inline-block;
+}
+
+.shoppingCartHide .moneyLogo {
+	color: #FFA02F;
+	font-size: 0.34rem;
+	float: none;
+	line-height: 0.45rem;
+}
+
+.shoppingCartShow .moneyLogo {
+	color: #FFA02F;
+	font-size: 0.34rem;
+	float: none;
+	line-height: 0.99rem;
+}
+.shoppingCartHideBtn span {
+	display: inline-block;
+	float: left;
+	width: 33.33%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	background: #fff;
+	padding-left: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+.shoppingCartHideBtn span:nth-child(1) {
+	font-size: 0.28rem;
+	color: #24AFFF
+}
+
+.shoppingCartHideBtn span:nth-child(2) {
+	text-align: center;
+	font-size: 0.34rem;
+	color: #4D4D4D;
+}
+
+.shoppingCartHideBtn span:nth-child(3) {
+	text-align: right;
+	font-size: 0.28rem;
+	color: #24AFFF;
+	padding-right: 0.3rem;
+}
+
+.shoppingFood6Img {
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	margin-top: 0.1rem;
+}
+
+.shoppingFood6Left {
+	padding-top: 0.1rem !important;
+	float: left;
+	line-height: 1.4 !important;
+	text-align: left !important;
+	border: none !important;
+}
+
+.shoppingFood6 .jiaBtnBox {
+	padding: 0 !important;
+	font-size: 0;
+}
+
+.shoppingFood6 .foodName {
+	float: none !important;
+}
+
+.bgcolorActive {
+	background: #FFA02F !important;
+}
+
+.fontColorActive {
+	color: #FF5900 !important;
+}
+
+/*购物车隐藏部分结束*/
+.moneyLogo {
+	color: #FF5900;
+	font-size: 0.28rem;
+	float: left;
+	line-height: 0.45rem;
+}
+
+.emptyCart {
+	display: inline-block;
+}
+
+/*滚动监听样式*/
+.leftActive {
+	background: #FEFEFE;
+	margin: 0 !important;
+	border-bottom: none;
+	color: #FF5900;
+}
+
+.rightActive {
+	width: 77%;
+	position: fixed;
+	top: 2.84rem;
+	right: 0;
+	z-index: 4;
+}
+
+/*购物车蒙层*/
+.tangChimengCeng {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	opacity: 0.7;
+	background: #332C2B;
+	display: none;
+}
+
+/*清空购物车弹框样式*/
+
+/*共用整体样式*/
+
+
+.modalOverlay {
+	background: transparent;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 4;
+}
+
+/*所有弹框共用蒙层样式*/
+.modalMengCeng {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	z-index: 5;
+	background: #000000;
+}
+
+/*购物车底层*/
+.emptyTanKuang {
+	display: none;
+	font-size: 0.32rem;
+}
+
+/*购物车消息框样式*/
+.modalEmptyData {
+	position: fixed;
+	top: 50%;
+	z-index: 6;
+	left: 50%;
+	margin-left: -3.35rem;
+	margin-top: -1.7rem;
+	border-radius: 0.2rem;
+	width: 6.7rem;
+	height: 3.4rem;
+	background: white;
+	border: 1px solid #000;
+	text-align: center;
+	opacity: 1 !important;
+}
+
+/*购物车头部信息框样式*/
+.modalEmptyDataHead {
+	height: 2.2rem;
+	line-height: 2.2rem;
+	border-bottom: 0.01rem #D2D3D3 solid;
+}
+
+/*购物车确认按钮样式*/
+.emptyOK {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	color: #FFA02F;
+	line-height: 1.16rem;
+	border-right: 0.01rem #E0E0E0 solid;
+}
+
+/*购物车取消按钮样式*/
+.emptyNo {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	line-height: 1.16rem;
+	border-right: 0.01rem solid #E0E0E0;
+}
+
+/*购物车弹框样式结束*/
+
+/*不在配送范围提示弹框样式开始*/
+.tipTanKuang {
+
+	/* display: none; */
+	font-size: 0.3rem;
+}
+
+.tipOk {
+	text-align: center;
+	line-height: 1.2rem;
+	color: #FFA02F;
+}
+
+/*不在配送范围提示弹框样式结束*/
+
+/*超市页面的样式开始*/
+.fruitTanKuang {
+	display: none;
+}
+
+.fruitTanKuangBody {
+	width: 6.36rem;
+	height: 6.26rem;
+	position: fixed;
+	top: 50%;
+	margin-top: -3.18rem;
+	left: 50%;
+	margin-left: -3.13rem;
+	z-index: 6;
+	background: #FFFFFF;
+	border-radius: 0.1rem;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	text-align: left;
+}
+
+.fruitImg {
+	height: 100%;
+	width: 100%;
+}
+
+.fruitTanKuangClose {
+	position: fixed;
+	height: 0.8rem;
+	width: 0.8rem;
+	top: 50%;
+	left: 50%;
+	margin-left: -0.4rem;
+	margin-top: 3.8rem;
+	z-index: 6;
+}
+
+/*超市页面的样式结束*/
+
+/* 售罄样式开始 */
+.foodNull {
+	position: relative;
+}
+
+.foodNull .foodNull {
+	position: absolute;
+	right: 1rem;
+	top: 0.5rem;
+	width: 1.1rem;
+	height: 1.1rem;
+}
+
+.foodNull h4 {
+	color: #999999;
+}
+
+.foodNull .moneyLogo,
+.foodNull .foodPrice {
+	color: #999 !important;
+}
+
+/* 售罄样式结束 */
+
+/* 评论样式开始 */
+.discussBox {
+	display: none;
+	height: 100%;
+	background: #fff;
+	padding-top: 0.3rem;
+	padding-left: 0.3rem;
+	padding-right: 0.2rem;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.discussContentTxt {
+	font-size: 0.2rem;
+	border-bottom: 0.01rem solid #E4E4E4;
+	padding-bottom: 0.2rem;
+	padding-top: 0.21rem;
+	height: auto;
+}
+
+.discussStart {
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+.discussStart img{
+	width: 0.26rem;
+	height: 0.24rem;
+}
+.discussContentPhone{
+	font-size: 0.28rem;
+}
+.discussContentTime {
+	color: #999;
+	float: right;
+	font-size: 0.26rem;
+}
+
+.discussTXT {
+	font-size: 0.28rem;
+	padding-bottom: 0.2rem
+}
+.shangjiaRe{
+	font-size: 0.26rem;
+	background: #e0e0e0;
+	padding: 0.2rem;
+	border-radius: 0.1rem;
+	height: auto;
+	margin-bottom:0.1rem;
+}
+/* 评论样式结束 */
+
+/* 商家详情样式开始 */
+.shangjiaBox {
+	display: none;
+	padding-top: 0.2rem;
+	color: #333333;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.shangjiaBox1 {
+	margin-bottom: 0.2rem;
+}
+
+.shangjiaBox div {
+	background: #fff;
+	padding: 0 0.3rem;
+}
+
+.shangjiaBox p {
+	padding: 0.34rem 0;
+	font-size: 0.3rem;
+}
+
+.shangjiaBox p img {
+	margin-right: 0.2rem;
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.p001 {
+	float: right;
+	width: 0.62rem !important;
+	height: 0.62rem !important;
+	margin-top: -0.1rem;
+}
+
+/* 商家详情样式结束 */

@@ -1,0 +1,61 @@
+/*
+* @Author: Administrator
+* @Date:   2017-01-03 14:35:22
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-01-10 16:09:10
+*/
+html,body{
+  height: 100%;
+  background: #ffffff;
+}
+.logoImg{
+  display: block;
+  width: 4.44rem;
+  height: 3.28rem;
+  margin: 0 auto;
+  margin-top: 0.66rem;
+  margin-bottom: 0.9rem;
+}
+.loginForm{
+  font-size: 0.3rem;
+  padding: 0 0.65rem;
+}
+.loginForm div{
+  margin-bottom: 0.5rem;
+  border-bottom: 0.01rem solid #F0F0F0;
+}
+.loginForm label{
+  display: inline-block;
+  color: #1A1A1A;
+}
+.loginForm input{
+  font-size: 0.28rem;
+  color: #ccc;
+  line-height: 1.428;
+}
+.submitBtn{
+  background: #FFA02F;
+  height: 0.9rem;
+  line-height: 0.9rem!important;
+  border-radius: 0.1rem;
+  font-size: 0.36rem!important;
+  color: #fff!important;
+  width: 100%;
+}
+/* 忘记密码 */
+.forget{
+  color: #EE8932!important;
+}
+.forgetPwd{
+  text-align: right;
+  color: #808080;
+  padding: 0 0.65rem;
+  font-size: 0.28rem;
+}
+.forgetPwd .forget{
+  float: left;
+  color: #808080;
+}
+.loginright{
+  color: #EE8932;
+}

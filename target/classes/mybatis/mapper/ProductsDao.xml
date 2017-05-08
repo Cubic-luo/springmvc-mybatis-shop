@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.dao.ProductsDao">
+	<!-- 根据商品id查询商品信息 -->
+	<select id="queryById" resultMap="productsResultMap">
+		SELECT
+		* FROM
+		shop_products
+		p,shop_productstype pt
+		WHERE pt.id=p.typeId AND p.id=#{productsId};
+	</select>
+	<!-- 根据商品类型id查询商品 -->
+	<select id="queryByTpeyId" parameterType="int" resultMap="productsResultMap">
+		SELECT
+		* FROM
+		shop_products
+		WHERE
+		typeId=#{typeId}
+	</select>
+	<!-- 查询所有商品 -->
+	<select id="queryAll" resultMap="productsResultMap">
+		SELECT
+		* From
+		shop_products
+	</select>
+	<!-- 根据订单id查询商品 -->
+	<select id="queryByOrderId" resultType="Products">
+		select * from
+		shop_products where id in(select productsId from
+		shop_orderandproducts
+		where orderId=#{id})
+	</select>
+	<!-- 映射products对象的resultMap -->
+	<resultMap type="Products" id="productsResultMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="price" column="price" />
+		<result property="number" column="number" />
+		<result property="typeId" column="typeId" />
+		<result property="imgUrl" column="imgUrl" />
+		<result property="info" column="info" />
+		<association property="productsType" javaType="ProductsType">
+			<id property="id" column="id" />
+			<result property="typeName" column="typeName" />
+			<result property="typeInfo" column="typeInfo" />
+		</association>
+	</resultMap>
+	<!-- 增加商品 -->
+	<insert id="insertProducts">
+		INSERT INTO
+		shop_products(name,price,number,typeId,imgUrl,info)
+		VALUES
+		(#{name},#{price},#{number},#{typeId},#{imgUrl},#{info});
+	</insert>
+	<!-- 删除商品 -->
+	<delete id="deleteProducts">
+		DELETE FROM shop_products WHERE id=#{productsId};
+	</delete>
+	<!-- 修改商品信息 -->
+	<update id="updateProducts">
+		UPDATE shop_products SET name=#{name},price=#{price},
+		number=#{number},typeId=#{typeId},imgUrl=#{imgUrl},info=#{info} WHERE
+		id=#{id}
+	</update>
+</mapper>

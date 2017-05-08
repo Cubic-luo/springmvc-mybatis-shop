@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.dao.ProductsTypeDao">
+	<!-- 增加商品类型 -->
+	<insert id="insertType">
+		INSERT INTO
+		shop_productsType(typeName,typeInfo)
+		VALUES
+		(#{typeName},#{typeInfo});
+	</insert>
+	<!--根据商品类型id删除商品类型 -->
+	<delete id="deleteTypeById">
+		DELETE FROM shop_productsType WHERE id=#{typeId};
+	</delete>
+	<!-- 修改商品类型信息 -->
+	<update id="updateType">
+		UPDATE shop_productsType SET
+		typeName=#{typeName},typeInfo=#{typeInfo} WHERE
+		id=#{id}
+	</update>
+	<!-- 根据商品类型id查询商品类型 -->
+	<select id="queryTypeById" parameterType="int" resultMap="productsTpyeResultMap">
+		SELECT
+		id,
+		typeName,
+		typeInfo
+		FROM
+		shop_productsType
+		WHERE
+		id = #{typeId}
+	</select>
+	<!-- 查询所有商品类型 -->
+	<select id="queryAllType" parameterType="int" resultMap="productsTpyeResultMap">
+		SELECT
+		*
+		FROM
+		shop_productstype
+	</select>
+	<!-- 对应queryById方法，映射user对象的resultMap -->
+	<resultMap type="ProductsType" id="productsTpyeResultMap">
+		<id property="id" column="id" />
+		<result property="typeName" column="typeName" />
+		<result property="typeInfo" column="typeInfo" />
+		<collection property="products" javaType="ArrayList"
+			column="id" ofType="Products" select="shop.dao.ProductsDao.queryByTpeyId"
+			fetchType="lazy">
+			<id property="id" column="id" />
+			<result property="name" column="name" />
+			<result property="price" column="price" />
+			<result property="number" column="number" />
+			<result property="typeId" column="typeId" />
+			<result property="imgUrl" column="imgUrl" />
+			<result property="info" column="info" />
+		</collection>
+	</resultMap>
+</mapper>

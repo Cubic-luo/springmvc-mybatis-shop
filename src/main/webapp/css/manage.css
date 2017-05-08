@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+.datagrid-toolbar{
+    padding:8px;
+}
+.tbSearch{
+    height: 22px;
+    margin:0;
+    padding:0 2px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    float: right;
+}
+.tbSubmit{
+    float: right;
+    margin-left:10px;
+    margin-right:20px;
+}

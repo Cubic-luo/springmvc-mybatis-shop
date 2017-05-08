@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.dao.OrderDao">
+    <!-- 根据订单id查询订单 -->
+    <select id="queryOrderById" resultMap="orderResultMap">
+		SELECT
+		u.*,o.id AS
+		oid,o.total,o.creatTime,o.userId
+		FROM
+		shop_order o,
+		shop_user u
+		WHERE
+		u.id
+		=o.userId
+		AND
+		o.id=#{orderId}
+	</select>
+    <!-- 根据用户id查询订单 -->
+    <select id="queryOrderByUserId" parameterType="int" resultMap="orderResultMap">
+		SELECT * FROM
+		shop_order
+		WHERE
+		userId=#{userId}
+	</select>
+    <!-- 映射order对象的resultMap -->
+    <resultMap type="Order" id="orderResultMap">
+        <id property="id" column="id"/>
+        <result property="total" column="total"/>
+        <result property="creatTime" column="creatTime"/>
+        <result property="userId" column="userId"/>
+        <association property="user" javaType="User">
+            <id property="id" column="id"/>
+            <result property="username" column="username"/>
+            <result property="password" column="password"/>
+            <result property="role" column="role"/>
+            <result property="imgUrl" column="imgUrl"/>
+            <result property="sex" column="sex"/>
+        </association>
+        <collection property="products" javaType="ArrayList"
+                    column="id" ofType="Products" select="shop.dao.ProductsDao.queryByOrderId"
+                    fetchType="lazy">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="price" column="price"/>
+            <result property="number" column="number"/>
+            <result property="type" column="type"/>
+            <result property="imgUrl" column="imgUrl"/>
+            <result property="info" column="info"/>
+        </collection>
+    </resultMap>
+    <!-- 插入订单与与商品的映射 ，即把商品插入订单 -->
+    <insert id="insertOrderMapProducts" parameterType="int">
+		INSERT
+		INTO
+		shop_orderandproducts(orderId,productsId,amount)
+		VALUES
+		(#{orderId},#{productsId},#{amount});
+	</insert>
+    <insert id="insertOrder" parameterType="Order" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO shop_order
+		(total,creatTime,userId)
+		VALUES (#{total},#{creatTime},#{userId})
+	</insert>
+</mapper>
